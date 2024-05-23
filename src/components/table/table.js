@@ -1,0 +1,32 @@
+const Table=()=>{
+    return(
+        <table>
+            <tr>
+                <td>S.no</td>
+                <td>Name</td>
+                <td>Marks</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Swetha</td>
+                <td>90</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Akhi</td>
+                <td>80</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Archana</td>
+                <td>75</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Reshma</td>
+                <td>85</td>
+            </tr>
+        </table>
+    )
+}
+export default Table
