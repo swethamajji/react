@@ -4,9 +4,11 @@ import AboutScreen from "../screens/about-screen"
 import ContactScreen from "../screens/contact-screen"
 import SettingScreen from "../screens/setting-screen"
 import InvalidScreen from "../screens/invalid-screen"
-import { useState } from "react"
+import { useReducer, useState } from "react"
 import { createContext } from "react"
 import ProductListing from "../components/products useEffect/productListing functional"
+import { reducer } from "./jsFunctions"
+import ProductDetailComponent from "../components/products useEffect/product details"
 
 
 
@@ -17,11 +19,18 @@ function NavigationStack()
 {
   const[username,setUsername]=useState("swetha");
   const[count,setCount]=useState(0);
+
+  const initialState={
+    count: 0,
+  }
+
+const[currentState,dispatch]=useReducer(reducer,initialState)
+
   const increaseCount=()=>{
     setCount(count+1);
   }
     return(
-      <UserInfo.Provider value={{name:username,salary:200000,count:count,increaseCount:increaseCount}}>
+      <UserInfo.Provider value={{name:username,salary:200000,count:count,increaseCount:increaseCount,currentState:currentState,dispatch:dispatch}}>
 <BrowserRouter>
 <Routes>
     {/* static Routes */}
@@ -30,11 +39,10 @@ function NavigationStack()
     <Route path="/contact" Component={ContactScreen}/>
     <Route path="/settings" Component={SettingScreen}/>
 
-{/* Invalid Routes*/}
 <Route path="*" Component={InvalidScreen}/>
 <Route
           path={":category/:productId"}
-          Component={ProductListing}
+          Component={ProductDetailComponent}
         />
 
 </Routes>

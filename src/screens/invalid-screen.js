@@ -5,7 +5,7 @@ function InvalidScreen() {
      const handledirect=()=>{
         const isNavigate=true;
         if(isNavigate){
-        navigate("/")
+        // navigate("/")
         }
         else{
 

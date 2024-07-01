@@ -9,7 +9,7 @@ function HomeScreen()
         <div>
            <center><h2>Welcome to HomeScreen</h2></center>
         <NavBar/>
-        <ImageComponent/>
+     
 <ProductListingFunctional/>
         
         </div>

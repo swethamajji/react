@@ -59,7 +59,7 @@ const {name,count}=useContext(UserInfo);
     const linkStyle={
       textDecoration:"none",
       color:"black",
-      padding:100,
+      padding:20,
     }
 
     return(
@@ -67,7 +67,7 @@ const {name,count}=useContext(UserInfo);
   <div className="container-fluid">
     <ul className="navbar-nav">
       <li className="nav-item">
-       <Link style={linkStyle} to={"/"}>Home</Link>
+       <Link style={linkStyle} to={"/"} >Home</Link>
       </li>
       <li className="nav-item">
        <Link style={linkStyle} to={"/about"}>About</Link>

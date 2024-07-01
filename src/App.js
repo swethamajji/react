@@ -38,6 +38,8 @@ import NavigationStack from "./navigation/navigation-stack";
 import Controlled from "./components/forms/controlled";
 import AutoFocus from "./components/autoFocus/autoFocus";
 import UseEffectEx2 from "./components/UseEffect/useEffect";
+import { Provider } from "react-redux";
+import { reduxStore } from "./redux/store";
 
 
 
@@ -322,7 +324,11 @@ function Hello()
 {
   return(
     <>
+
+    <Provider store={reduxStore}>
     <NavigationStack/>
+    </Provider>
+    
     </>
   )
 }

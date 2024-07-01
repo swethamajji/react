@@ -10,7 +10,7 @@ const UseEffectEx2 = () => {
   useEffect(() => {
     console.log("useEffect....");
     document.title = `React count ${count}`;
-    fetchProducts();
+    fetchProducts();    
   }, [count]);
 
   const fetchProducts = async () => {

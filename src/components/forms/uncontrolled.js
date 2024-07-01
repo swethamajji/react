@@ -6,6 +6,7 @@ const Uncontrolled=()=>{
     const passwordRef=useRef();
     const optionRef=useRef();
     const[error,setError]=useState("")
+    
     const handleSubmit=(event)=>{
         event.preventDefault();
 
